@@ -9,10 +9,9 @@
  */
 void _printfs(char *c)
 {
-	int i;
 
 	if (c == NULL)
 		return;
-	for (i = 0; c[i] != '\0'; i++)
-		_printfchar(c[i]);
+	while (*c)
+		_printfchar(*c++);
 }
