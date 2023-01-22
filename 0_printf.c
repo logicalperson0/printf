@@ -12,7 +12,7 @@ int _printf(const char *format, ...)
 	int i, count = 0;
 	char *k;
 	va_list args;
-	char sc[] = {'c', 's'};
+	char f;
 
 	va_start(args, format);
 	for (i = 0; format && format[i]; i++)
@@ -23,10 +23,10 @@ int _printf(const char *format, ...)
 			switch (format[i])
 			{
 				case 'c':
-					sc[0] = (char)va_arg(args, int);
-					if (!sc[0])
+					f = (char)va_arg(args, int);
+					if (!f)
 						break;
-					_printfchar(sc[0]), count++;
+					_printfchar(f), count++;
 					break;
 				case 's':
 					k = va_arg(args, char *);
