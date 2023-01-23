@@ -13,14 +13,9 @@ int _printfs(char *c)
 
 	if (c == NULL)
 	{
-		write(1, "(null)", 6);
-		return (6);
+		return (-1);
 	}
-	else
-	{
-		while (c[i] != '\0')
-			i++;
-		_printfchar(c[i]);
-	}
-	return (i);
+	while (c[i] != '\0')
+		i++;
+	return (write (1, c, i));
 }
