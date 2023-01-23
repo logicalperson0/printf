@@ -40,7 +40,7 @@ int _printf(const char *format, ...)
 					_printfchar('%'), count++;
 					break;
 				default:
-					break;
+					return (-1);
 			}
 		}
 	}
