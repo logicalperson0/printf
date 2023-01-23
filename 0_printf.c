@@ -7,7 +7,7 @@
  */
 int _printf(const char *format, ...)
 {
-	unsigned int i = 0, count = 0;
+	unsigned int i = 0, count = 0; /*d*/
 	char *k;
 	va_list args;
 	char f;
@@ -21,7 +21,7 @@ int _printf(const char *format, ...)
 			_printfchar(format[i]), count++;
 		else
 		{
-			++i;
+			i++;
 			switch (format[i])
 			{
 				case 'c':
@@ -32,6 +32,8 @@ int _printf(const char *format, ...)
 					k = va_arg(args, char *);
 					_printfs(k), count += _strlen(k);
 					break;
+				/*case 'd':
+					d = va_arg(args, int);*/
 				case '%':
 					_printfchar('%'), count++;
 					break;
