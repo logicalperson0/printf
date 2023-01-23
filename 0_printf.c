@@ -26,14 +26,10 @@ int _printf(const char *format, ...)
 			{
 				case 'c':
 					f = va_arg(args, int);
-					if (!f)
-						return (-1);
 					_printfchar(f), count++;
 					break;
 				case 's':
 					k = va_arg(args, char *);
-					if (!k)
-						return (-1);
 					_printfs(k), count += _strlen(k);
 					break;
 				case '%':
