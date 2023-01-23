@@ -35,7 +35,7 @@ int _printf(const char *format, ...)
 					_printfs(k), count += _strlen(k);
 					break;
 				case '%':
-					_printfs("%%"), count++;
+					_printfchar('%'), count++;
 					break;
 				default:
 					break;
