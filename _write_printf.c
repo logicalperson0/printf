@@ -13,8 +13,7 @@ int _printfs(char *c)
 
 	if (c == NULL)
 	{
-		write(1, "(null)", 6);
-		return (6);
+		return (-1);
 	}
 	else
 	{
