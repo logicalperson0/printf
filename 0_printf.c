@@ -25,26 +25,25 @@ int _printf(const char *format, ...)
 				case 'c':
 					f = (char)va_arg(args, int);
 					if (!f)
-						break;
+						return (-1);
 					_printfchar(f), count++;
 					break;
 				case 's':
 					k = va_arg(args, char *);
 					if (!k)
-						break;
+						return (-1);
 					_printfs(k), count += _strlen(k);
 					break;
 				case '%':
-					_printfchar('%'), count++;
+					_printfs("%%"), count++;
 					break;
 				default:
-					return (-1);
+					break;
 			}
 		}
 		else
 			_printfchar(format[i]), count++;
 	}
-
 	va_end(args);
 
 	return (count);
