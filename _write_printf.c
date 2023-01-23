@@ -7,15 +7,23 @@
  * @c: parameter
  * Return: stout of args
  */
-int _printfs(char *c)
+int _printfs(va_list str)
 {
 	int i = 0;
+	char *s;
 
-	if (c == NULL)
+	s = va_arg(str, char *);
+	if (s == NULL)
 	{
-		return (-1);
+		return (-1);	
 	}
-	while (c[i] != '\0')
-		i++;
-	return (write (1, c, i));
+	else
+	{
+		while (s[i] != '\0')
+		{
+			_printfchar(s[i]);
+			i++;
+		}
+	}
+	return (i);
 }

@@ -8,35 +8,29 @@
 int _printf(const char *format, ...)
 {
 	unsigned int i = 0, count = 0;
-	char *k;
 	va_list args;
-	char f;
 
-	va_start(args, format);
-	if (format == NULL || (format[i] == '%' && !format[i + 1]))
+	if (!format)
 		return (-1);
-	for (i = 0; format && format[i] != '\0'; i++)
+	va_start(args, format);
+	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] != '%')
 			_printfchar(format[i]), count++;
 		else
 		{
-			i++;
-			switch (format[i])
+			if (format[i + 1] == '\0')
+					return (-1);
+			else if (format[i + 1] == '%')
+				_printfchar('%'), count++, i++;
+
+			else if (compare_f(format[i + 1]) != NULL)
+				count += (compare_f(format[i + 1]))(args), i++;
+
+			else
 			{
-				case 'c':
-					f = va_arg(args, int);
-					_printfchar(f), count++;
-					break;
-				case 's':
-					k = va_arg(args, char *);
-					_printfs(k), count += _strlen(k);
-					break;
-				case '%':
-					_printfchar('%'), count++;
-					break;
-				default:
-					break;
+				_printfchar(format[i]);
+				count++;
 			}
 		}
 	}

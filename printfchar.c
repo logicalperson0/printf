@@ -1,4 +1,5 @@
 #include <unistd.h>
+#include <stdarg.h>
 
 /**
  * _printfchar - writes the character c to stdout
@@ -10,4 +11,16 @@
 int _printfchar(char c)
 {
 	return (write(1, &c, 1));
+}
+
+/**
+ * printingc - func that prints char
+ * @chars: parameter
+ *
+ * Return: 1
+ */
+int printingc(va_list chars)
+{
+	_printfchar(va_arg(chars, int));
+	return (1);
 }
