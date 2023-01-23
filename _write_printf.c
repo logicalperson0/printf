@@ -13,14 +13,14 @@ int _printfs(char *c)
 
 	if (c == NULL)
 	{
-		write(1, "(null)", 6)
+		write(1, "(null)", 6);
 		return (6);
 	}
 	else
 	{
 		while (c[i] != '\0')
 			i++;
-		printfchar(c[i]);
+		_printfchar(c[i]);
 	}
 	return (i);
 }
