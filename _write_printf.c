@@ -12,7 +12,7 @@ int _printfs(char *c)
 	int i = 0;
 
 	if (c == NULL)
-		c = "(null)";
+		return (-1);
 	while (c[i] != '\0')
 		i++;
 	return (write(1, c, i));

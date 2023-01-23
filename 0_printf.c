@@ -7,14 +7,16 @@
  */
 int _printf(const char *format, ...)
 {
-	unsigned int i, count = 0;
+	unsigned int i = 0, count = 0;
 	char *k;
 	va_list args;
 	char f;
 
-	if (format == NULL)
-		return (-1);
 	va_start(args, format);
+	if (format == NULL || (format[i] == '%' && !format[i + 1]))
+		return (-1);
+	if (!format[i])
+		return (0);
 	for (i = 0; format && format[i] != '\0'; i++)
 	{
 		if (format[i] != '%')
@@ -22,10 +24,12 @@ int _printf(const char *format, ...)
 		else
 		{
 			i++;
+			if (format[i] == '\0')
+				return (-1);
 			switch (format[i])
 			{
 				case 'c':
-					f = (char)va_arg(args, int);
+					f = va_arg(args, int);
 					if (!f)
 						return (-1);
 					_printfchar(f), count++;
@@ -45,6 +49,5 @@ int _printf(const char *format, ...)
 		}
 	}
 	va_end(args);
-
 	return (count);
 }
