@@ -20,7 +20,6 @@ int _printfs(char *c)
 	{
 		while (c[i] != '\0')
 			i++;
-		_printfchar(c[i]);
+		return (write(1, c, i));
 	}
-	return (i);
 }
