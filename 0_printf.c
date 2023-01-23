@@ -32,8 +32,6 @@ int _printf(const char *format, ...)
 					k = va_arg(args, char *);
 					_printfs(k), count += _strlen(k);
 					break;
-				/*case 'd':
-					d = va_arg(args, int);*/
 				case '%':
 					_printfchar('%'), count++;
 					break;
