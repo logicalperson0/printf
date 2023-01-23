@@ -5,7 +5,7 @@
 #include <unistd.h>
 
 int _printfchar(char c);
-void _printfs(char *c);
+int _printfs(char *c);
 int _strlen(char *s);
 int _printf(const char *format, ...);
 

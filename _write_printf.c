@@ -7,11 +7,13 @@
  * @c: parameter
  * Return: stout of args
  */
-void _printfs(char *c)
+int _printfs(char *c)
 {
+	int i = 0;
 
 	if (c == NULL)
-		return;
-	while (*c)
-		_printfchar(*c++);
+		c = "(null)";
+	while (c[i] != '\0')
+		i++;
+	return (write(1, c, i));
 }

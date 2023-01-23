@@ -1,7 +1,5 @@
 #include <limits.h>
-#include <stdio.h>
 #include "main.h"
-#include <stdarg.h>
 /**
  * _printf - func that prints c & s format
  * @format: parameter
@@ -14,8 +12,10 @@ int _printf(const char *format, ...)
 	va_list args;
 	char f;
 
+	if (format == NULL)
+		return (-1);
 	va_start(args, format);
-	for (i = 0; format && format[i]; i++)
+	for (i = 0; format && format[i] != '\0'; i++)
 	{
 		if (format[i] == '%')
 		{
