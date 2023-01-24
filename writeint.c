@@ -30,7 +30,8 @@ int write_int(va_list args)
 
 	{
 		b = 10;
-		while (input / b > 9)
+		while
+		 (input / b > 9)
 			b *= 10;
 		while (b > 0)
 		{
