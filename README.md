@@ -13,4 +13,5 @@ int main()
 
 -->
 
-
+What does the "f" in printf stand for?
+The "f" in printf is short for "formatted" and indicates that the text printed to the screen will be formatted.
