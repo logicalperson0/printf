@@ -15,7 +15,8 @@ typedef struct all
 {
 	char k;
 	int (*fptr)(va_list);
-} printing;
+}
+ printing;
 
 int (*compare_f(const char c))(va_list);
 int _printfchar(char c);
