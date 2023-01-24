@@ -25,7 +25,7 @@ int write_int(va_list args)
 		_printfchar(input + 48);
 		c++;
 	}
-	if 
+	if
 	(input > 9)
 
 	{
