@@ -18,6 +18,7 @@ int _printfchar(char c)
  *
  * Return: 1
  */
+
 int printingc(va_list chars)
 {
 	_printfchar(va_arg(chars, int));
