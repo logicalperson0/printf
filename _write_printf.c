@@ -4,7 +4,7 @@
 /**
  * _printfs - func that prints to stout
  *
- * @c: parameter
+ * @str: parameter
  * Return: stout of args
  */
 int _printfs(va_list str)
@@ -15,7 +15,7 @@ int _printfs(va_list str)
 	s = va_arg(str, char *);
 	if (s == NULL)
 	{
-		return (-1);	
+		return (-1);
 	}
 	else
 	{
