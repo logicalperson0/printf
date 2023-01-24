@@ -15,7 +15,7 @@ int _printfs(va_list str)
 	s = va_arg(str, char *);
 	if (s == NULL)
 	{
-		write(1,"(null)",6);
+		write(1, "(null)", 6);
 		return (6);
 	}
 	else
