@@ -9,12 +9,11 @@
  */
 int binary_p(va_list ints)
 {
-	unsigned int c, i, count = 0, input, j;
-	unsigned int *d;
-
-	d = malloc(sizeof(*d));
+	unsigned int c, i, count = 0, input;
+	unsigned int d[32];
 
 	input = va_arg(ints, int);
+
 
 	if (input == 0)
 	{
@@ -27,15 +26,12 @@ int binary_p(va_list ints)
 		for (i = 0; input > 0; i++)
 		{
 			c = input / 2;
-			j = input % 2;
-			d[i] = j;
+			d[i] = input % 2;
 			input = c;
 		}
 		while (i > 0)
 			_printfchar(d[i - 1] + 48), i--, count++;
-		_printfchar(d[i] + 48), count++;
 	}
-	free(d);
 	return (count);
 }
 
