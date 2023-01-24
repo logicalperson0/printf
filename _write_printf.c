@@ -5,7 +5,7 @@
  * _printfs - func that prints to stout
  *
  * @str: parameter
- * Return: stout of args
+ * Return: stout of args, if null write (null)
  */
 int _printfs(va_list str)
 {
@@ -15,7 +15,8 @@ int _printfs(va_list str)
 	s = va_arg(str, char *);
 	if (s == NULL)
 	{
-		return (-1);
+		write(1,"(null)",6);
+		return (6);
 	}
 	else
 	{

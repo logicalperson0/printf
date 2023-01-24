@@ -33,8 +33,9 @@ int write_int(va_list args)
 		while (b > 0)
 		{
 			a = input / b;
-			input = input % b;
 			_printfchar(a + 48);
+
+			input = input % b;
 			b = b / 10;
 			c++;
 		}
