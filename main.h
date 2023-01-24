@@ -18,7 +18,7 @@ typedef struct all
 }
  printing;
 
-int (*compare_f(const char c))(va_list);
+int (*compare_f (const char c)) (va_list);
 int _printfchar(char c);
 int _printfs(va_list str);
 int printingc(va_list chars);
