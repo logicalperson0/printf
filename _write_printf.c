@@ -7,6 +7,7 @@
  * @str: parameter
  * Return: stout of args, if null write (null)
  */
+
 int _printfs(va_list str)
 {
 	int i = 0;
