@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
  * print_c - prints a char
@@ -6,9 +6,9 @@
  *
  * Return: 1
  */
-int print_c(va_list valist)
+int print_c(va_list varlist)
 {
-    char c = va_arg(valist, int);
+    char c = va_arg(varlist, int);
 
     _putchar(c);
 
@@ -17,13 +17,13 @@ int print_c(va_list valist)
 
 /**
  * print_s - prints a string
- * @valist: va_list with next argument
+ * @varlist: var_list with next argument
  *
  * Return: number of chars printed
  */
-int print_s(va_list valist)
+int print_s(var_list varlist)
 {
-    char *s = va_arg(valist, char *);
+    char *s = va_arg(varlist, char *);
     int i, count = 0;
 
     if (s == NULL)
@@ -40,13 +40,13 @@ int print_s(va_list valist)
 
 /**
  * print_d - prints an integer
- * @valist: va_list with next argument
+ * @varlist: va_list with next argument
  *
  * Return: number of chars printed
  */
-int print_d(va_list valist)
+int print_d(va_list varlist)
 {
-    int n = va_arg(valist, int);
+    int n = va_arg(varlist, int);
     int count = 0;
 
     if (n < 0)
