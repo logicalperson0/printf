@@ -1,8 +1,9 @@
 #include "main.h"
+#include "holberton.h"
 /**
  * _strlen - fun that is len of str
  *
- * @s: is a ASCII char
+ * @s: is a ASCII char , string to check
  *
  * Return: len of a str
  */
