@@ -14,7 +14,8 @@ int write_int(va_list args)
 	c = 0;
 	input = va_arg(args, int);
 
-	if (input < 0)
+	if 
+	(input < 0)
 	{
 		input *= -1;
 		_printfchar(45);
