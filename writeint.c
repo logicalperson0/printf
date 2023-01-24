@@ -26,6 +26,7 @@ int write_int(va_list args)
 		c++;
 	}
 	if (input > 9)
+	
 	{
 		b = 10;
 		while (input / b > 9)
