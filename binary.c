@@ -1,6 +1,7 @@
 #include "main.h"
 
-/**binary_p - func that prints binary of int
+/**
+ * binary_p - func that prints binary of int
  *
  * @ints: parameter of va_list
  *
@@ -11,7 +12,7 @@ int binary_p(va_list ints)
 	unsigned int c, i, count = 0, input, j;
 	unsigned int *d;
 
-	d = malloc(sizeof *d);
+	d = malloc(sizeof(*d));
 
 	input = va_arg(ints, int);
 
