@@ -7,6 +7,7 @@
  * Return: len of a str
  */
 int _strlen(char *s)
+
 {
 	int i;
 

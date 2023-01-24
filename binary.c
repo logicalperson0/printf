@@ -14,7 +14,6 @@ int binary_p(va_list ints)
 
 	input = va_arg(ints, int);
 
-
 	if (input == 0)
 	{
 		_printfchar(input + 48), count++;
