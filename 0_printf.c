@@ -19,7 +19,6 @@ int _printf(const char *format, ...)
 		if (v[i] != '%')
 			_printfchar(v[i]), count++;
 		else
-		
 		{
 			if (v[i + 1] == '\0')
 				return (-1);

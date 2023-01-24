@@ -10,8 +10,10 @@
 
 int _write(char *buffer, int size)
 {
-    int bytes_written = 0;
+	int bytes_written = 0;
 
-    bytes_written = write (1, buffer, size);
-    return (bytes_written);
+	bytes_written = write(1, buffer, size);
+	return (bytes_written);
+	bytes_written = write(1, buffer, size);
+	return (bytes_written);
 }

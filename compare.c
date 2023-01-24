@@ -19,7 +19,6 @@ int (*compare_f(const char c))(va_list)
 	int i;
 
 	for (i = 0; printff[i].k != '\0'; i++)
-	
 	{
 		if (printff[i].k == c)
 			return (printff[i].fptr);

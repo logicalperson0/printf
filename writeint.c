@@ -21,13 +21,12 @@ int write_int(va_list args)
 		_printfchar(45);
 		c++;
 	}
-	if 
-	(input >= 0 && input <= 9)
+	if (input >= 0 && input <= 9)
 	{
 		_printfchar(input + 48);
 		c++;
 	}
-	if 
+	if
 	(input > 9)
 
 	{
