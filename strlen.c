@@ -1,5 +1,4 @@
 #include "main.h"
-#include "holberton.h"
 /**
  * _strlen - fun that is len of str
  *
@@ -9,10 +8,10 @@
  */
 int _strlen(char *s)
 {
-    int i;
+	int i;
 
-    for (i = 0; s[i] != '\0'; i++)
-        ;
+	for (i = 0; s[i] != '\0'; i++)
+		;
 
 	return (i);
 }
