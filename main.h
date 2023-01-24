@@ -3,6 +3,7 @@
 
 #include <stdarg.h>
 #include <unistd.h>
+#include <stdlib.h>
 
 /**
  * struct all - func specifier struct for printf
@@ -22,5 +23,6 @@ int _printfs(va_list str);
 int printingc(va_list chars);
 int _printf(const char *format, ...);
 int write_int(va_list args);
+int binary_p(va_list ints);
 
 #endif
