@@ -7,10 +7,11 @@
  *
  * Return: number of bytes written
  */
+
 int _write(char *buffer, int size)
 {
     int bytes_written = 0;
 
-    bytes_written = write(1, buffer, size);
+    bytes_written = write (1, buffer, size);
     return (bytes_written);
 }
