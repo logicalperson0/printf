@@ -30,6 +30,8 @@ int u_ints(va_list uints);
 int o_eight(va_list oeights);
 int x_hexadec(va_list hexa);
 int printhexa(int a);
+int XhexaUp(va_list hexaup);
+int printhexaU(int a);
 
 int binary_p(va_list ints);
 
