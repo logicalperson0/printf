@@ -14,6 +14,7 @@ int (*compare_f(const char c))(va_list)
 		{'i', write_int},
 		{'b', binary_p},
 		{'u', u_ints},
+		{'o', o_eight},
 		{'\0', NULL}
 	};
 
