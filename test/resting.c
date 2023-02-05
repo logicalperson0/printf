@@ -10,12 +10,32 @@
 int main(void)
 {
 	int len, len2;
+	unsigned int l = UINT_MAX;
 
-	 len = _printf("Let's try to printf a simple sentence.\n");
-	     len2 = printf("Let's try to printf a simple sentence.\n");
+	len = _printf("Let's try to printf a simple sentence.\n");
+	len2 = printf("Let's try to printf a simple sentence.\n");
 
-	      _printf("Length:[%d, %i]\n", len, len);
-	          printf("Length:[%d, %i]\n", len2, len2);
+	_printf("Length:[%d, %i]\n", len, len);
+	printf("Length:[%d, %i]\n", len2, len2);
+
+	_printf("%u\n", 1024);
+	printf("%u\n", 1024);
+
+	_printf("%u\n", -1024);
+	printf("%u\n", -1024);
+
+	_printf("%u\n", 0);
+	printf("%u\n", 0);
+
+	_printf("%u\n", UINT_MAX);
+	printf("%u\n", UINT_MAX);
+
+	_printf("%u\n", l);
+	printf("%u\n", l);
+
+
+	_printf("There is %u bytes in %u KB\n", 1024, 1);
+	printf("There is %u bytes in %u KB\n", 1024, 1);
 
 	_printf("%b\n", 98);
 	_printf("Character:[%c]\n", 'H');

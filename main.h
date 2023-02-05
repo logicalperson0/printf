@@ -23,6 +23,7 @@ int _printfs(va_list str);
 int printingc(va_list chars);
 int _printf(const char *format, ...);
 int write_int(va_list args);
+int u_ints(va_list uints);
 int binary_p(va_list ints);
 
 #endif
