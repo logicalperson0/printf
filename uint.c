@@ -29,7 +29,7 @@ int u_ints(va_list uints)
 		x = 10;
 		while ((input / x) > 9)
 			x *= 10;
-	
+
 		while (x > 0)
 		{
 			y = input / x;
