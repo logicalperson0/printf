@@ -18,4 +18,4 @@ For understand how it works we can use this flow chart.
 
 ## Usage
 
-For useit you need all the files in the repository.
+For useit you need all the files in the repository!
